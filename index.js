@@ -1,5 +1,5 @@
 const Express = require("express");
-const { MongoClient, ObjectId } = require('mongodb')
+const { MongoClient } = require('mongodb')
 
 var app = Express();
 
@@ -16,7 +16,7 @@ const init = () =>
   })
 
   const getStarWars = () => {
-    // hardcodeado: peliculas con "Toy" en el titulo
+    // hardcodeado: peliculas con "Star Wars" en el titulo
     const filter = {
      'title':{$regex: /Star Wars/}
     };
@@ -30,11 +30,6 @@ const init = () =>
     return result;
   }
   
-
-app.get("/fecha/:nombre", (req,res)=>{
-    fecha = Date();
-    res.send("Hola "+req.params.nombre+"! -- Hoy es:"+fecha);
-})
 
 app.get("/starwars", (req,res)=>{
 getStarWars()

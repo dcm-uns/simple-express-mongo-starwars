@@ -5,7 +5,7 @@ var app = Express();
 
 
 const connectionUrl = 'mongodb://127.0.0.1:27017'
-const dbName = 'mflix'
+const dbName = 'peliculas'
 
 let db
 

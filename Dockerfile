@@ -1,4 +1,4 @@
-FROM node:20-alpine
+FROM node:26-alpine3.23
 WORKDIR /
 COPY package*.json ./
 RUN npm install --only-production

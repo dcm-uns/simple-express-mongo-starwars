@@ -31,7 +31,7 @@ const init = () =>
   }
   
 
-app.get("/starwars", (req,res)=>{
+app.get("/", (req,res)=>{
 getStarWars()
 .then((items) => {
     items = items.map((item) => ({
